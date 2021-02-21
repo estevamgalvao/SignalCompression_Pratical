@@ -1,0 +1,12 @@
+huffman class
+    - get/set?
+    - read
+    - encode
+    - decode
+entropy class
+    - get/set?
+    - read
+    - entropy
+    - information
+    - lenght
+    - redundancy
