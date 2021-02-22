@@ -26,6 +26,7 @@ int main(int argc, char const *argv[])
 {
     std::map<char,int> freq;
     std::map<char, int>::iterator it;
+    std::vector<element>::iterator it_table;
     std::vector<element> table;
 
     
@@ -50,7 +51,12 @@ int main(int argc, char const *argv[])
 
     std::sort(table.begin(), table.end(), compareByFreq);
 
+    for(it_table=table.end()-1; it_table!=table.begin(); --it_table){
+        std::cout << it_table->freq << '\n';
 
+        
+
+    }
     
     return 0;
 }
