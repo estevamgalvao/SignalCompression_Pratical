@@ -17,8 +17,8 @@ struct element {
     tree_node *ref;
 };
 
-bool compareByFreq(element& a, element& b){
-    return a.freq < b.freq;
+bool compareByFreq(element a, element b){
+    return a.freq > b.freq;
 }
 
 
