@@ -10,6 +10,7 @@
 #include <map>
 #include <stack>
 #include <array>
+#include <algorithm>
 
 
 typedef uint8_t 	u1;	/*!< Tipo de dado (1 byte)  */

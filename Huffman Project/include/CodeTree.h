@@ -19,11 +19,11 @@ class CodeTree {
         TreeNode *root;
     
     public:
-        void CodeTree(TreeNode *r_) {
+        CodeTree(TreeNode *r_) {
             root = r_;
         }
         
         void build(TreeNode *n_) {}
 
 
-}
+};

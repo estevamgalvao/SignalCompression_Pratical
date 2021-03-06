@@ -2,7 +2,7 @@
 #ifndef ELEMENT_H
 #define ELEMENT_H
 */
-#include "TreeNode.h"
+#include "CodeTree.h"
 #include "Definitions.h"
 
 //! \class Element
@@ -24,6 +24,9 @@ class Element {
             ref = r_;
         }
 
-        
-
 };
+
+class ElementVector : std::vector<Element> {
+    public:
+        TreeNode* Fusion(Element e1_, Element e2_) {}
+}
