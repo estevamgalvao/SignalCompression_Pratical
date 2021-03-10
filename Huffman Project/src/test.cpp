@@ -3,6 +3,9 @@
 #include <string>
 #include <map>
 #include <algorithm>
+#include "..\include\Element.h"
+#include "..\include\CodeTree.h"
+#include "..\include\Definitions.h"
 
 struct tree_node {
     char symbol;
@@ -57,6 +60,14 @@ int main(int argc, char const *argv[])
         
 
     }
+    char x = 'a';
+    u4 f;
+    TreeNode t1 = TreeNode();
+    TreeNode *pt1 = &t1;
+    Element e1 = Element(x, f, pt1);
+
+    ElementVector v1 = ElementVector();
+    v1.insert(e1); //trying to insert a element
     
     return 0;
 }

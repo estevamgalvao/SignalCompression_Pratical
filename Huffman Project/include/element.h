@@ -1,7 +1,6 @@
-/*
 #ifndef ELEMENT_H
 #define ELEMENT_H
-*/
+
 #include "CodeTree.h"
 #include "Definitions.h"
 
@@ -28,5 +27,7 @@ class Element {
 
 class ElementVector : std::vector<Element> {
     public:
-        TreeNode* Fusion(Element e1_, Element e2_) {}
-}
+        TreeNode Fusion(Element e1_, Element e2_) {}
+};
+
+#endif

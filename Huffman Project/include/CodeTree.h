@@ -1,7 +1,6 @@
-/*
-#ifndef ELEMENT_H
-#define ELEMENT_H
-*/
+
+#ifndef CODETREE_H
+#define CODETREE_H
 
 #include "Definitions.h"
 
@@ -27,3 +26,5 @@ class CodeTree {
 
 
 };
+
+#endif
