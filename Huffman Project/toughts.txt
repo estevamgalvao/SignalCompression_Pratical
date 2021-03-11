@@ -1,0 +1,23 @@
+huffman class
+    - get/set?
+    - read
+    - encode
+    - decode
+entropy class
+    - get/set?
+    - read
+    - entropy
+    - information
+    - lenght
+    - redundancy
+
+ler arquivo -> hashtable de prob -> vetor de elementos -> 
+construir a árvore -> encontrar folhas da ávore contando 
+direita e esquerda pra fazer o código -> gerar hashtable 
+de códigos
+
+
+#fusion: - talves uma função para o vector de elements
+	pegar 2 elementos e uní-los em um par de dois nós, de-
+	-volver um nó e com sua referência e uma string com os
+	2 chars?
