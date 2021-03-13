@@ -7,7 +7,7 @@ class Node {
     
     private:
         char symbol_;
-        u4 weight_;
+        unsigned int weight_;
         Node *left_;
         Node *right_;
         bool i_am_leaf_;
@@ -16,7 +16,7 @@ class Node {
     
     public:
         //Node(char c, u4 w);
-        Node(char c, u4 w, Node *l = NULL, Node *r = NULL);
+        Node(char c, unsigned int w, Node *l = NULL, Node *r = NULL);
         bool AmILeaf();
         Node* GetLeftNode();
         Node* GetRightNode();

@@ -1,6 +1,6 @@
 #include "CodeTree.h"
 
-Node::Node(char c, u4 w, Node *l, Node *r) {
+Node::Node(char c, unsigned int w, Node *l, Node *r) {
 //Node::Node(char c, u4 w) {
     symbol_ = c;
     weight_ = w;

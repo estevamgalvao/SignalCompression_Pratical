@@ -2,20 +2,30 @@
 
 int main(int argc, char const *argv[])
 {
-    u4 b = 8;
-    char c = 'a';
-    Node n = Node(c, b);
-    Node *p1 = &n;
-    Node papai = Node('p', (u4) 10);
-    /* code */
+    
+    char arr[] = {'b', 'o', 'o', 'k'};
+    int n = sizeof(arr) / sizeof(arr[0]);
+ 
+    std::vector<char> vect(arr, arr + n);
 
-    std::cout << n.AmILeaf() << "mas vai toma noc u\n";
+    std::unordered_map<char, unsigned int> dict;
 
-    papai.SetLeftNode(p1);
+    std::unordered_map<char, unsigned int>::iterator itr; 
 
-    std::cout << "Valor ponteiro: " << p1 << " || " << "Endereço n: " << &n;
-    std::cout << "\n\nLeftNode: " << papai.GetLeftNode();
-    std::cout << "\nRightNode: " << papai.GetRightNode();
+    dict.insert(std::pair<char, unsigned int>('b',1));
+    std::cout << dict.size();
+
+    if (dict.find('b') != dict.end()) {
+        dict.find('b')->second++;
+    }
+
+    std::cout << "\nThe map dict is : \n"; 
+    std::cout << "\tKEY\tELEMENT\n"; 
+    for (itr = dict.begin(); itr != dict.end(); ++itr) { 
+        std::cout << '\t' << itr->first 
+             << '\t' << itr->second << '\n'; 
+    } 
+    std::cout << std::endl;
 
 
 
