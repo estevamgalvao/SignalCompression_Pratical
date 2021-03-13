@@ -5,7 +5,7 @@ SDIR = src
 IDIR = include
 ODIR = obj
 
-NAME = test
+NAME = main
 
 DEPS = $(wildcard $(IDIR)/*.h)
 

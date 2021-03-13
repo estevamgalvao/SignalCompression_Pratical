@@ -4,6 +4,7 @@
 #include "Definitions.h"
 
 class Node {
+    
     private:
         char symbol_;
         u4 weight_;
@@ -11,11 +12,15 @@ class Node {
         Node *right_;
         bool i_am_leaf_;
 
+        friend class CodeTree;
+    
     public:
-        Node();
+        Node(char c, u4 w, Node *l, Node *r);
         bool AmILeaf();
         Node* GetLeftNode();
         Node* GetRightNode();
+        void SetLeftNode(Node *n);
+        void SetRightNode(Node *n);
         void DeleteLeft(Node *f);
         void DeleteRight(Node *f);
 };
