@@ -15,7 +15,8 @@ class Node {
         friend class CodeTree;
     
     public:
-        Node(char c, u4 w, Node *l, Node *r);
+        //Node(char c, u4 w);
+        Node(char c, u4 w, Node *l = NULL, Node *r = NULL);
         bool AmILeaf();
         Node* GetLeftNode();
         Node* GetRightNode();
