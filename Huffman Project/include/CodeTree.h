@@ -7,7 +7,6 @@ class Node {
     
     private:
         char symbol_;
-        unsigned int weight_;
         Node *left_;
         Node *right_;
         bool i_am_leaf_;
@@ -15,15 +14,20 @@ class Node {
         friend class CodeTree;
     
     public:
+        unsigned int weight_;
+
         //Node(char c, u4 w);
         Node(char c, unsigned int w, Node *l = NULL, Node *r = NULL);
         bool AmILeaf();
+        void SetLeaf(bool x);
         Node* GetLeftNode();
         Node* GetRightNode();
+        char GetSymbol();
         void SetLeftNode(Node *n);
         void SetRightNode(Node *n);
         void DeleteLeft(Node *f);
         void DeleteRight(Node *f);
+
 };
 
 
