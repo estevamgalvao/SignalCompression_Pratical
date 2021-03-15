@@ -27,7 +27,7 @@ Node* Node::GetRightNode() {
 
 char Node::GetSymbol() {
     return symbol_;
-}
+};
 
 void Node::SetLeftNode(Node *n) {
     left_ = n;
@@ -44,5 +44,5 @@ void Node::SetRightNode(Node *n) {
 
 CodeTree::CodeTree(Node *r) {
     root_ = r;
-}
+};
 
