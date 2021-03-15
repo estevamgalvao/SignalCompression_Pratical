@@ -27,48 +27,34 @@ int main(int argc, char const *argv[])
     std::vector<Node>::iterator itr_node_vec;
 
     for (itr_dict = dict.begin()++; itr_dict != dict.end(); ++itr_dict) {
-        Node *aux_n = new Node(itr_dict->first, itr_dict->second);
-        node_vector.push_back(*aux_n);
-    }
-
-    for (itr_node_vec = node_vector.begin(); itr_node_vec != node_vector.end();
-    ++itr_node_vec) {
-        std::cout << "\nSymbol: " << itr_node_vec->GetSymbol() << "\t Weight: "
-        << itr_node_vec->weight_;
+        Node aux_n(itr_dict->first, itr_dict->second);
+        node_vector.push_back(aux_n);
     }
 
     std::sort(node_vector.begin(), node_vector.end(), &CompareNodeByWeight);
-    std::cout << "\n\nSORTED";
-    
-    for (itr_node_vec = node_vector.begin(); itr_node_vec != node_vector.end();
-    ++itr_node_vec) {
-        std::cout << "\nSymbol: " << itr_node_vec->GetSymbol() << "\t Weight: "
-        << itr_node_vec->weight_;
-    }
-
+  
     while (node_vector.size() > 1) {
-/*         std::vector<Node>::iterator itr1;
-        std::vector<Node>::iterator itr2; */
-        Node *aux_n;
+
         unsigned int s = node_vector.size();
 
         Node *n1 = &node_vector[s-2];
         Node *n2 = &node_vector[s-1];
 
-        aux_n = new Node(NULL,
+        Node aux_n(NULL,
                         n1->weight_ + n2->weight_,
                         n1,
                         n2);
-        aux_n->SetLeaf(false);
+
+        aux_n.SetLeaf(false);
 
         node_vector.pop_back();
         node_vector.pop_back();
-        node_vector.push_back(*aux_n);
+        node_vector.push_back(aux_n);
         std::sort(node_vector.begin(), node_vector.end(), &CompareNodeByWeight);
     }
 
     itr_node_vec = node_vector.begin();
-    std::cout << "Nó: " << itr_node_vec->GetRightNode()->GetSymbol();
+    std::cout << "\n\nNó: " << itr_node_vec->GetRightNode()->GetSymbol();
 
     for (itr_node_vec = node_vector.begin(); itr_node_vec != node_vector.end();
     ++itr_node_vec) {
