@@ -1,5 +1,5 @@
-#include "../include/sqrt.h"
-#include "sqrt.cpp"
+#include "sqrt.h"
+// #include "sqrt.cpp"
 #include <gtest/gtest.h>
  
 TEST(SquareRootTest, PositiveNos) 

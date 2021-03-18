@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/estevamalbuquerque/Área de Trabalho/teste1/test"
+CMAKE_SOURCE_DIR = /home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/estevamalbuquerque/Área de Trabalho/teste1/test"
+CMAKE_BINARY_DIR = /home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/test
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/estevamalbuquerque/Área de Trabalho/teste1/test/CMakeFiles" "/home/estevamalbuquerque/Área de Trabalho/teste1/test/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/test/CMakeFiles /home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/test/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/estevamalbuquerque/Área de Trabalho/teste1/test/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/test/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,33 @@ executeTests/fast:
 	$(MAKE) -f CMakeFiles/executeTests.dir/build.make CMakeFiles/executeTests.dir/build
 .PHONY : executeTests/fast
 
+home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.o: home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.cpp.o
+
+.PHONY : home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.o
+
+# target to build an object file
+home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.cpp.o:
+	$(MAKE) -f CMakeFiles/executeTests.dir/build.make CMakeFiles/executeTests.dir/home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.cpp.o
+.PHONY : home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.cpp.o
+
+home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.i: home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.cpp.i
+
+.PHONY : home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.i
+
+# target to preprocess a source file
+home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.cpp.i:
+	$(MAKE) -f CMakeFiles/executeTests.dir/build.make CMakeFiles/executeTests.dir/home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.cpp.i
+.PHONY : home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.cpp.i
+
+home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.s: home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.cpp.s
+
+.PHONY : home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.s
+
+# target to generate assembly for a file
+home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.cpp.s:
+	$(MAKE) -f CMakeFiles/executeTests.dir/build.make CMakeFiles/executeTests.dir/home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.cpp.s
+.PHONY : home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.cpp.s
+
 sqrt_test.o: sqrt_test.cpp.o
 
 .PHONY : sqrt_test.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... executeTests"
+	@echo "... home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.o"
+	@echo "... home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.i"
+	@echo "... home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Exercises/GTest/src/sqrt.s"
 	@echo "... sqrt_test.o"
 	@echo "... sqrt_test.i"
 	@echo "... sqrt_test.s"
