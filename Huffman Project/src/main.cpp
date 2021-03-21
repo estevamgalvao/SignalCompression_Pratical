@@ -5,7 +5,7 @@ bool CompareNodeByWeight (Node *n1, Node *n2) {
 }
 
 
-int main(int argc, char const *argv[])
+int main()
 {
     /*
     char arr[] = {'b', 'o', 'o', 'k'};
@@ -46,7 +46,7 @@ int main(int argc, char const *argv[])
         node_vector.pop_back();
         node_vector.pop_back();
 
-        aux_n = new Node(NULL,
+        aux_n = new Node('\0',
                         n1->weight_ + n2->weight_,
                         n1,
                         n2);
@@ -57,17 +57,22 @@ int main(int argc, char const *argv[])
         std::sort(node_vector.begin(), node_vector.end(), &CompareNodeByWeight);
     }
 
+
+
     // itr_node_vec = node_vector.begin();
     std::cout << "\n\nLink4: " << node_vector[0]->weight_;
     std::cout << "\n\nNó C: " << node_vector[0]->GetLeftNode()->GetSymbol();
     std::cout << "\n\nLink2: " << node_vector[0]->GetRightNode()->weight_;
     std::cout << "\n\nNó K: " << node_vector[0]->GetRightNode()->GetLeftNode()->GetSymbol();
-    std::cout << "\n\nNó B: " << node_vector[0]->GetRightNode()->GetRightNode()->GetSymbol();
+    std::cout << "\n\nNó B: " << node_vector[0]->GetRightNode()->GetRightNode()->GetSymbol() << "\n";
     // for (itr_node_vec = node_vector.begin(); itr_node_vec != node_vector.end();
     // ++itr_node_vec) {
     //     std::cout << "\nSymbol: " << itr_node_vec->GetSymbol() << "\t Weight: "
     //     << itr_node_vec->weight_;
     // }
+
+    CodeTree *aux_tree = new CodeTree(node_vector[0]);
+    aux_tree->PrintTree();
 
     return 0;
 }

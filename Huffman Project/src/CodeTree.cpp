@@ -46,3 +46,59 @@ CodeTree::CodeTree(Node *r) {
     root_ = r;
 };
 
+void CodeTree::PrintTree() {
+    unsigned int count = 0;
+    Node* aux_n = root_;
+
+    std::cout << "Pretty-Tree Printer\n";
+    std::cout << "===== Root =====\n";
+    std::cout << "       " << aux_n->GetSymbol() << "\n";
+
+    if (aux_n->left_ != NULL && aux_n->right_ != NULL) {
+        std::cout << "     /   \\\n";
+        std::cout << "    /     \\\n";
+        std::cout << "   " << aux_n->left_->symbol_
+                << "        "
+                << aux_n->right_->symbol_ << "\n";
+    }
+    else if (aux_n->left_ != NULL) {
+        std::cout << "     /\n";
+        std::cout << "    /\n";
+        std::cout << "   " << aux_n->left_->symbol_ << "\n";
+    }
+    else if (aux_n->right_ != NULL) {
+        std::cout << "         \\\n";
+        std::cout << "          \\\n";
+        std::cout << "            "
+                << aux_n->right_->symbol_ << "\n";
+    }
+
+    count++;
+    char input;
+
+    while(input != 'q') {
+        std::cout << "Next move: ";
+        std::cin >> input;
+
+        switch (input)
+        {
+        case 'l':
+            /* code */
+            break;
+        case 'r':
+
+        case 'q':
+        
+        default:
+            std::cout << "Invalid argument. Please, choose one from the followi"
+            << "ng options:\n[l] - left node\n[r] - right node\n[q] - quit\n";
+            std::cin >> input;
+
+            break;
+        }
+    }
+
+
+
+
+};

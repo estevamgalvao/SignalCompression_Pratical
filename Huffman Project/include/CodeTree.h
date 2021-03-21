@@ -38,7 +38,7 @@ class CodeTree {
     public:
         CodeTree(Node *r);
         Node* Link(Node *n1, Node *n2); // get two nodes and give them a father
-        void PrintTree(Node *r);
+        void PrintTree();
         Node* GetFather(Node *r, std::vector<u1>);
 
 
