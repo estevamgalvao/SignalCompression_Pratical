@@ -52,7 +52,7 @@ void CodeTree::PrintTree() {
 
     std::cout << "Pretty-Tree Printer\n";
     std::cout << "===== Root =====\n";
-    std::cout << "       " << aux_n->GetSymbol() << "\n";
+    std::cout << "       " << aux_n->symbol_ << "\n";
 
     if (aux_n->left_ != NULL && aux_n->right_ != NULL) {
         std::cout << "     /   \\\n";
@@ -77,13 +77,39 @@ void CodeTree::PrintTree() {
     char input;
 
     while(input != 'q') {
-        std::cout << "Next move: ";
+        std::cout << "\n\nNext move: ";
         std::cin >> input;
 
         switch (input)
         {
         case 'l':
-            /* code */
+            if (aux_n->left_ != NULL) {
+                aux_n = aux_n->left_;
+                std::cout << "===== Step [" << count << "] =====\n";
+                std::cout << "       " << aux_n->symbol_ << "\n";
+
+                if (aux_n->left_ != NULL && aux_n->right_ != NULL) {
+                    std::cout << "     /   \\\n";
+                    std::cout << "    /     \\\n";
+                    std::cout << "   " << aux_n->left_->symbol_
+                            << "        "
+                            << aux_n->right_->symbol_ << "\n";
+                }
+                else if (aux_n->left_ != NULL) {
+                    std::cout << "     /\n";
+                    std::cout << "    /\n";
+                    std::cout << "   " << aux_n->left_->symbol_ << "\n";
+                }
+                else if (aux_n->right_ != NULL) {
+                    std::cout << "         \\\n";
+                    std::cout << "          \\\n";
+                    std::cout << "            "
+                            << aux_n->right_->symbol_ << "\n";
+                }
+            }
+            else {
+                std::cout << "No left node remaining.\n";
+            }
             break;
         case 'r':
 
