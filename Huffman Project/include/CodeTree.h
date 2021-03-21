@@ -27,6 +27,7 @@ class Node {
         void SetRightNode(Node *n);
         void DeleteLeft(Node *f);
         void DeleteRight(Node *f);
+        void PrintNode();
 
 };
 

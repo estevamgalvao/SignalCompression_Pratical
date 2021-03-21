@@ -29,6 +29,29 @@ char Node::GetSymbol() {
     return symbol_;
 };
 
+void Node::PrintNode() {
+    std::cout << "       " << this->symbol_ << "\n";
+
+    if (this->left_ != NULL && this->right_ != NULL) {
+        std::cout << "     /   \\\n";
+        std::cout << "    /     \\\n";
+        std::cout << "   " << this->left_->symbol_
+                << "        "
+                << this->right_->symbol_ << "\n";
+    }
+    else if (this->left_ != NULL) {
+        std::cout << "     /\n";
+        std::cout << "    /\n";
+        std::cout << "   " << this->left_->symbol_ << "\n";
+    }
+    else if (this->right_ != NULL) {
+        std::cout << "         \\\n";
+        std::cout << "          \\\n";
+        std::cout << "            "
+                << this->right_->symbol_ << "\n";
+    }
+}
+
 void Node::SetLeftNode(Node *n) {
     left_ = n;
 };
@@ -52,32 +75,13 @@ void CodeTree::PrintTree() {
 
     std::cout << "Pretty-Tree Printer\n";
     std::cout << "===== Root =====\n";
-    std::cout << "       " << aux_n->symbol_ << "\n";
-
-    if (aux_n->left_ != NULL && aux_n->right_ != NULL) {
-        std::cout << "     /   \\\n";
-        std::cout << "    /     \\\n";
-        std::cout << "   " << aux_n->left_->symbol_
-                << "        "
-                << aux_n->right_->symbol_ << "\n";
-    }
-    else if (aux_n->left_ != NULL) {
-        std::cout << "     /\n";
-        std::cout << "    /\n";
-        std::cout << "   " << aux_n->left_->symbol_ << "\n";
-    }
-    else if (aux_n->right_ != NULL) {
-        std::cout << "         \\\n";
-        std::cout << "          \\\n";
-        std::cout << "            "
-                << aux_n->right_->symbol_ << "\n";
-    }
+    aux_n->PrintNode();
 
     count++;
-    char input;
+    char input, ret;
 
     while(input != 'q') {
-        std::cout << "\n\nNext move: ";
+        std::cout << "\nNext move: ";
         std::cin >> input;
 
         switch (input)
@@ -85,35 +89,47 @@ void CodeTree::PrintTree() {
         case 'l':
             if (aux_n->left_ != NULL) {
                 aux_n = aux_n->left_;
-                std::cout << "===== Step [" << count << "] =====\n";
-                std::cout << "       " << aux_n->symbol_ << "\n";
-
-                if (aux_n->left_ != NULL && aux_n->right_ != NULL) {
-                    std::cout << "     /   \\\n";
-                    std::cout << "    /     \\\n";
-                    std::cout << "   " << aux_n->left_->symbol_
-                            << "        "
-                            << aux_n->right_->symbol_ << "\n";
-                }
-                else if (aux_n->left_ != NULL) {
-                    std::cout << "     /\n";
-                    std::cout << "    /\n";
-                    std::cout << "   " << aux_n->left_->symbol_ << "\n";
-                }
-                else if (aux_n->right_ != NULL) {
-                    std::cout << "         \\\n";
-                    std::cout << "          \\\n";
-                    std::cout << "            "
-                            << aux_n->right_->symbol_ << "\n";
-                }
+                std::cout << "\n\n===== Step [" << count << "] =====\n";
+                aux_n->PrintNode();
             }
             else {
-                std::cout << "No left node remaining.\n";
+                std::cout << "No left node remaining.\nReturn to root? [y/n]\n";
+                std::cin >> ret;
+
+                if (ret == 'y') {
+                    std::cout << "\n\n===== Root =====\n";
+                    aux_n = root_;
+                    aux_n->PrintNode();
+                    count = 0;
+                }
+                else {
+                    input = 'q';
+                }
             }
             break;
         case 'r':
+            if (aux_n->right_ != NULL) {
+                aux_n = aux_n->right_;
+                std::cout << "\n\n===== Step [" << count << "] =====\n";
+                aux_n->PrintNode();
+            }
+            else {
+                std::cout << "No right node remaining.\nReturn to root? [y/n]\n";
+                std::cin >> ret;
 
+                if (ret == 'y') {
+                    std::cout << "\n\n===== Root =====\n";
+                    aux_n = root_;
+                    aux_n->PrintNode();
+                    count = 0;
+                }
+                else {
+                    input = 'q';
+                }
+            }
+            break;
         case 'q':
+            break;
         
         default:
             std::cout << "Invalid argument. Please, choose one from the followi"

@@ -57,20 +57,6 @@ int main()
         std::sort(node_vector.begin(), node_vector.end(), &CompareNodeByWeight);
     }
 
-
-
-    // itr_node_vec = node_vector.begin();
-    std::cout << "\n\nLink4: " << node_vector[0]->weight_;
-    std::cout << "\n\nNó C: " << node_vector[0]->GetLeftNode()->GetSymbol();
-    std::cout << "\n\nLink2: " << node_vector[0]->GetRightNode()->weight_;
-    std::cout << "\n\nNó K: " << node_vector[0]->GetRightNode()->GetLeftNode()->GetSymbol();
-    std::cout << "\n\nNó B: " << node_vector[0]->GetRightNode()->GetRightNode()->GetSymbol() << "\n";
-    // for (itr_node_vec = node_vector.begin(); itr_node_vec != node_vector.end();
-    // ++itr_node_vec) {
-    //     std::cout << "\nSymbol: " << itr_node_vec->GetSymbol() << "\t Weight: "
-    //     << itr_node_vec->weight_;
-    // }
-
     CodeTree *aux_tree = new CodeTree(node_vector[0]);
     aux_tree->PrintTree();
 

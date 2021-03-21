@@ -5,17 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "g++.exe - Criar e depurar o arquivo ativo",
+            "name": "g++ - Criar e depurar o arquivo ativo",
             "type": "cppdbg",
             "request": "launch",
-            "program": "D:\\Documentos\\UnB10\\CS\\PraticalWorks\\SignalCompression_Pratical\\Huffman Project\\main.exe",
+            "program": "/home/estevamalbuquerque/Documentos/UnB/CS/PraticalWorks/SignalCompression_Pratical/Huffman Project/main",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\gdb.exe",
             "setupCommands": [
                 {
                     "description": "Habilitar a reformatação automática para gdb",
@@ -23,7 +22,8 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: g++.exe arquivo de build ativo"
+            "preLaunchTask": "C/C++: g++ arquivo de build ativo",
+            "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
 }
