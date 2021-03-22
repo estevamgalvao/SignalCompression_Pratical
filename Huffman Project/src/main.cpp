@@ -21,7 +21,12 @@ int main()
     // Filling the dictionary
     dict['b'] = 1;
     dict['o'] = 2;
-    dict['k'] = 1;
+    dict['k'] = 2;
+    dict['e'] = 3;
+    dict['p'] = 1;
+    dict['r'] = 1;
+    
+    
 
     std::vector<Node*> node_vector;
     std::vector<Node>::iterator itr_node_vec;
@@ -40,9 +45,7 @@ int main()
 
         Node *n1 = node_vector[s-2];
         Node *n2 = node_vector[s-1];
-        // Node *n3 = &n1;
-        // Node *n4 = &n2;
-        
+    
         node_vector.pop_back();
         node_vector.pop_back();
 
